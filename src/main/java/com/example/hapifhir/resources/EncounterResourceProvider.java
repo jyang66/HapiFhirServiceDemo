@@ -49,6 +49,12 @@ public class EncounterResourceProvider implements IResourceProvider {
 	
 	
 		
+	/**
+	 * Note: For reducing the complexity as introduction, this is a simplified implementation that doesn't 
+	 *       support resource version history.
+	 * @param encounter
+	 * @return
+	 */
 	@Create
 	public MethodOutcome createEncounter(@ResourceParam Encounter encounter) {
 		String id = null;
@@ -122,7 +128,13 @@ public class EncounterResourceProvider implements IResourceProvider {
     	return retVal;
 	}
 	
-	
+	/**
+	 * Note: For reducing the complexity as introduction, this is a simplified implementation that doesn't 
+	 *       support resource version history.
+	 * @param id
+	 * @param theEncounter
+	 * @return
+	 */
 	@Update
     public MethodOutcome updateEncounter(@IdParam IdDt id, @ResourceParam Encounter theEncounter) {
 		MethodOutcome retVal = new MethodOutcome();
